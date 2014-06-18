@@ -10,6 +10,7 @@ class PatientsController < ApplicationController
 			flash[:success] = "#{@patient.fname} #{@patient.lname} has successfully registered"
 			redirect_to root_url
 		else
+			flash.now[:error] = "Error"
 			render :new
 		end		 
 	end
