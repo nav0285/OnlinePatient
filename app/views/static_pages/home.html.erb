@@ -1,0 +1,8 @@
+<h1>Welcome</h1>
+<% if current_doctor %>
+	<% if current_doctor.admin %>
+		<%= link_to 'New', new_department_path %>
+	<% end %>	
+<% end %>	
+<%= link_to 'List', departments_path %>
+<%= link_to 'Sign In', signin_path %>

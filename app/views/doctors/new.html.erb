@@ -1,0 +1,23 @@
+<div class="error">
+<% if @doctor.errors.any? %>
+	<p><%= @doctor.errors.count %> errors occurred</p>
+	<ul>
+		<% @doctor.errors.full_messages.each do |m| %>
+		<li>
+			<%= m %>
+		</li>
+		<% end %>
+	</ul>
+<% end %>
+</div>
+
+<%= form_for(@doctor) do |f| %>
+	<%= f.label :Name %>
+	<%= f.text_field :name %><br/>
+	<%= f.label :Sex %>
+	<%= f.text_field :sex %><br/>
+	<%= f.label :Age %>
+	<%= f.text_field :age %><br/>
+	<%= f.hidden_field :department_id, {:value => @department.id} %>
+	<%= f.submit :Submit %>
+<% end %>

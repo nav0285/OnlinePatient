@@ -1,0 +1,16 @@
+<% if @department.doctors.nil? %>
+	<h1> No Doctors </h1>
+<% else %>
+	<ul>
+		<% @department.doctors.each do |d| %>
+			<li>
+				<%=	d.name %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
+<% if current_doctor %>
+	<% if current_doctor.admin %>
+		<%= link_to 'New', new_doctor_path(:id=>@department.id) %>
+	<% end %>
+<% end %>
