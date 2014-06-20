@@ -1,0 +1,9 @@
+<%= form_for @appointment do |f| %>
+	<%= f.label "Enter your Patient Id" %>
+	<%= f.text_field :patient_id %>
+	<div id="department_select">
+	<%= collection_select(:doctor, :department_id, Department.all, :id, :name, {:prompt => "Select Department"}) %>
+	</div>
+	<%= f.grouped_collection_select(:doctor_id, Department.order(:name), :doctors, :name, :id, :name, {prompt: "Select doctor"}, {:id=>"doctor_select"}) %>
+	<%= f.submit %>
+<% end %>	
