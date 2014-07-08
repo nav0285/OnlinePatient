@@ -7,4 +7,8 @@
 <%= link_to 'List', departments_path %>
 <%= link_to 'Sign In', signin_path %>
 <%= link_to 'Patient', new_patient_path %>
-<%= link_to 'Appointment', new_appointment_path %>
+<% if current_doctor %>
+	<%= link_to 'Appointment', appointments_path %>
+<% else %>	
+	<%= link_to 'Appointment', new_appointment_path %>
+<% end %>

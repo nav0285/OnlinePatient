@@ -1,9 +1,42 @@
 <%= form_for @appointment do |f| %>
-	<%= f.label "Enter your Patient Id" %>
-	<%= f.text_field :patient_id %>
-	<div id="department_select">
-	<%= collection_select(:doctor, :department_id, Department.all, :id, :name, {:prompt => "Select Department"}) %>
-	</div>
-	<%= f.grouped_collection_select(:doctor_id, Department.order(:name), :doctors, :name, :id, :name, {prompt: "Select doctor"}, {:id=>"doctor_select"}) %>
-	<%= f.submit %>
-<% end %>	
+	<table>	
+	<tr>
+		<td>
+			<%= f.label "Enter your Patient Id" %>
+		</td>
+		<td>
+			<%= f.text_field :patient_id %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label "Department :" %>
+		</td>
+		<td> 
+			<%= collection_select(:doctor, :department_id, Department.all, :id, :name, {:prompt => "Select Department"}) %>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<%= f.label "Doctor :" %>
+		</td>
+		<td>
+		<%= f.grouped_collection_select(:doctor_id, Department.order(:name), :doctors, :name, :id, :name, {prompt: "Select doctor"}, {:id=>"doctor_select"}) %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label "Date" %>
+		</td>
+		<td>
+			<%= f.text_field :appointment_date %> 
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>	
+			<%= f.submit %>
+		</td>
+	</tr>		
+	</table>
+<% end %>
