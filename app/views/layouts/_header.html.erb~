@@ -1,0 +1,10 @@
+<div id="header">
+	<h2 align="center">Online Scheduler</h2>
+	<%= link_to 'Home', root_url %>
+	<%= link_to 'Department', departments_path %> |
+	<% if current_doctor %>
+		<p> Logged in as <%= current_doctor.name %>, <%= link_to 'Sign Out', signout_path %></p>
+	<% else %>
+		 <%= link_to 'Sign In', signin_path %>	
+	<% end %>	
+</div>

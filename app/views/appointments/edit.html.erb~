@@ -1,0 +1,21 @@
+<table align="center">
+	<tr><td>Name: </td>
+			<td><%= find_patient_name(@appointment.patient_id) %></td></tr>
+	<tr><td>Age: </td>
+			<td><%= Patient.find(@appointment.patient_id).age %></td></tr>		
+</table>
+<table align="center">
+<%= form_for @appointment do |f| %>
+	<th><%= f.label "Report" %></th>
+	<tr><td><%= f.text_area :report %></td></tr>
+	<tr><td><%= f.submit "Submit" %></td></tr>
+<% end %>
+</table>
+<p align="left">Previous reports</p>
+<table align="left">
+<% @app.each do |a| %>
+	<tr><td><%= a.report %></td>
+	<td> by Dr. <%= find_doctor(a.doctor_id) %>,</td>
+	<td> <small>Date: <%= a.appointment_date %></small></td></tr>
+<% end %>	
+</table>

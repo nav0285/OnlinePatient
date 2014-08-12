@@ -35,7 +35,7 @@ class DoctorsController < ApplicationController
 	private
 
 		def doctor_params
-			params.fetch(:doctor, {}).permit(:name, :age, :sex, :department_id, :password, :password_confirmation)
+			params.fetch(:doctor, {}).permit(:name, :age, :sex, :experience, :qualification, :department_id, :password, :password_confirmation)
 		end
 
   	def show_error

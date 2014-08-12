@@ -19,3 +19,21 @@
  .error{
  color: red;
  }
+ 
+ #errors{
+ color: red;
+ }
+ 
+ #header{
+ background-color: #00FFFF;
+ color: green;
+ text-align: right;
+ padding-top: 10px;
+ padding-right: 15px;
+ }
+ 
+ .center_page{
+ background-color: #F0F8FF;
+ color: red;
+ text-align: center;
+ }

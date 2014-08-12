@@ -1,3 +1,4 @@
+<h1> Registration Form</h1>
 <div class="error">
 <% if @patient.errors.any? %>
 	<p><%= pluralize(@patient.errors.count, "error") %> occurred</p>
@@ -10,8 +11,9 @@
 	</ul>
 <% end %>
 </div>
+<div id="table">
 <%= form_for @patient do |f| %>
- <table>
+ <table align='center'>
  		<tr>
  			<td>
  				<%= f.label "First Name" %>
@@ -86,3 +88,4 @@
  		</tr>
  	</table>
 <% end %>		
+</div>

@@ -7,7 +7,7 @@ class PatientsController < ApplicationController
 	def create
 		@patient = Patient.new(patient_params)
 		if @patient.save
-			flash[:success] = "#{@patient.fname} #{@patient.lname} has successfully registered"
+			flash[:success] = "#{@patient.fname} #{@patient.lname} has successfully registered. Your Patient id is #{@patient.id}"
 			redirect_to root_url
 		else
 			render :new

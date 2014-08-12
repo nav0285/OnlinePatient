@@ -1,6 +1,11 @@
 <div> Appointments </div>
 <%= @date %>
 <ul>
+<% if @patients.any? %>
 <% @patients.each do |p| %>
-	<li><%= find_patient_name(p.patient_id) %></li>
+	<li><%= link_to find_patient_name(p.patient_id), edit_appointment_path(id: "#{p.patient_id}") %>
+	<%= find_appointment_time(p.patient_id, @date) %></li>
 <% end %></ul>
+<% else %>
+<p> No Patients scheduled for today </p>
+<% end %>

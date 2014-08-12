@@ -19,5 +19,9 @@
 	<%= f.label :Age %>
 	<%= f.text_field :age %><br/>
 	<%= f.hidden_field :department_id, {:value => @department.id} %>
+	<%= f.label "Qualification" %>
+	<%= f.text_field :qualification %><br/>
+	<%= f.label "Experience" %>
+	<%= f.text_field :experience %><br/>
 	<%= f.submit :Submit %>
 <% end %>

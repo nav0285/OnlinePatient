@@ -1,14 +1,13 @@
-<h1>Welcome</h1>
 <% if current_doctor %>
 	<% if current_doctor.admin %>
-		<%= link_to 'New', new_department_path %>
+		<%= link_to 'New', new_department_path %> <br/>
+		<%= link_to 'Add Doctor', new_doctor_path(:id=>current_doctor.department_id) %><br/>
 	<% end %>	
 <% end %>	
-<%= link_to 'List', departments_path %>
-<%= link_to 'Sign In', signin_path %>
-<%= link_to 'Patient', new_patient_path %>
 <% if current_doctor %>
 	<%= link_to 'Appointment', appointments_path %>
 <% else %>	
-	<%= link_to 'Appointment', new_appointment_path %>
+	<h1>Welcome To Online Patient Scheduler</h1>
+	<h2>Take the <%= link_to 'Appointment', new_appointment_path %> online</h2>
+	<h2> Haven't registered yet? <%= link_to 'Register', new_patient_path %></h2>
 <% end %>

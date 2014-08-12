@@ -1,13 +1,19 @@
 <% if @department.doctors.nil? %>
 	<h1> No Doctors </h1>
 <% else %>
-	<ul>
+		<p><b>Head of the Department</b></p>
 		<% @department.doctors.each do |d| %>
-			<li>
-				<%=	d.name %>
-			</li>
+			<% if d.admin? %>
+					<%= d.name %><br/>
+			<% end %>		
 		<% end %>
-	</ul>
+		<p><b>Associate Doctors</b></p>	
+		<% @department.doctors.each do |d| %>
+			<% if d.admin? %>
+			<% else %>		
+				<%=	d.name %><br/>
+			<% end %>
+		<% end %>
 <% end %>
 <% if current_doctor %>
 	<% if current_doctor.admin %>
