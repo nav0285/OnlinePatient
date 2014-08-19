@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812185333) do
+ActiveRecord::Schema.define(version: 20140812232958) do
 
   create_table "appointments", force: true do |t|
     t.text     "report"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140812185333) do
     t.datetime "updated_at"
     t.date     "appointment_date"
     t.string   "appointment_time"
+    t.boolean  "complete",         default: false
   end
 
   create_table "departments", force: true do |t|

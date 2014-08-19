@@ -4,14 +4,14 @@
 		<p><b>Head of the Department</b></p>
 		<% @department.doctors.each do |d| %>
 			<% if d.admin? %>
-					<%= d.name %><br/>
+					<%= link_to d.name, d %><br/>
 			<% end %>		
 		<% end %>
 		<p><b>Associate Doctors</b></p>	
 		<% @department.doctors.each do |d| %>
 			<% if d.admin? %>
 			<% else %>		
-				<%=	d.name %><br/>
+				<%=	link_to d.name, d %><br/>
 			<% end %>
 		<% end %>
 <% end %>

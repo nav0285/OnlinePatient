@@ -4,7 +4,7 @@ OnlinePatient::Application.routes.draw do
 
 	root 'static_pages#home'
   resources :departments
-  resources :doctors, :only=>[:new, :create]
+  resources :doctors, :only=>[:new, :create, :show]
   get 'Sign Up', to: 'doctors#search', as: :signup
   post 'doctors/uptodate'
   resources :sessions, :only=>[:new, :create, :destroy]

@@ -1,11 +1,28 @@
 <div> Appointments </div>
-<%= @date %>
-<ul>
+<%= @date %><br/>
 <% if @patients.any? %>
-<% @patients.each do |p| %>
-	<li><%= link_to find_patient_name(p.patient_id), edit_appointment_path(id: "#{p.patient_id}") %>
-	<%= find_appointment_time(p.patient_id, @date) %></li>
-<% end %></ul>
+	<table align="center">
+		<% @patients.each do |p| %>
+			<tr>
+				<td>
+					<%= link_to find_patient_name(p.patient_id), edit_appointment_path(id: "#{p.patient_id}") %>
+				</td>
+				<td>
+					<%= find_appointment_time(p.patient_id, @date) %>
+				</td>
+				<td>
+					<% if p.complete %>
+						, Done
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
 <% else %>
-<p> No Patients scheduled for today </p>
-<% end %>
+	<p> No Patients scheduled for today </p>
+<% end %><br/>
+<% if @bool %>
+	<%= link_to 'Yesterday', appointments_path %>
+<% else %>	
+	<%= link_to 'Tomorrow', appointments_path(id: '1') %>
+<% end %>	

@@ -10,11 +10,15 @@ class DoctorsController < ApplicationController
 	def create 
 		@doctor = Doctor.new(doctor_params)
 		if @doctor.save
-			flash[:success] = "Successfully user created"
+			flash[:success] = "#{@doctor.name} has been added and his/her id is #{@doctor.id}"
 			redirect_to root_url
 		else
 			render :new, locals: {:@department=>Department.find(@doctor.department_id)}
 		end
+	end
+	
+	def show
+		@doctor = Doctor.find(params[:id])
 	end
 
 	def uptodate

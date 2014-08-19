@@ -8,9 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *= require jquery-ui/datepicker
+ *= require superfish
+ *= require superfish-vertical
+ *= require superfish-navbar
  *= require_self
  *= require_tree .
  */
+
  
  #success{
  color: green;
@@ -24,16 +28,35 @@
  color: red;
  }
  
- #header{
- background-color: #00FFFF;
- color: green;
- text-align: right;
- padding-top: 10px;
- padding-right: 15px;
- }
- 
- .center_page{
- background-color: #F0F8FF;
- color: green;
- text-align: center;
- }
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+
+	#wrapper {
+		min-height: 100%;
+		position: relative;
+	}
+
+	#header {
+		padding: 10px;
+		background: #5ee;
+		text-align: right;
+	}
+	
+	.content {
+		padding: 10px;
+		padding-bottom: 80px;   /* Height of the footer element */
+		text-align: center;
+	}
+	
+	#footer {
+		width: 100%;
+		height: 80px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background: #5ee;
+		text-align: right;
+	}

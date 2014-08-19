@@ -6,10 +6,10 @@ class Appointment < ActiveRecord::Base
 	
 	validates :doctor_id, presence: true
 	
-	validates :patient_id, presence: true, uniqueness: {scope: [:appointment_date, :appointment_time]}
+	validates :patient_id, presence: true, uniqueness: {scope: [:appointment_date, :appointment_time], message: "#{Patient.find[:patient_id].fname} already have an appointment at that time. So please choose some other time. Thank you."}
 	
 	validates :appointment_date, presence: true, uniqueness: {scope: [:patient_id, :doctor_id]}
 
-	validates :appointment_time, presence: true, uniqueness: {scope: [:appointment_date, :doctor_id]}
+	validates :appointment_time, presence: true, uniqueness: {scope: [:appointment_date, :doctor_id], message: " is not available.. Sorry"}
 
 end

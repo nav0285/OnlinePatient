@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery-ui/datepicker
 //= require jquery_ujs
+//= require superfish
+//= require hoverIntent
 //= require turbolinks
 //= require_tree .

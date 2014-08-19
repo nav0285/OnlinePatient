@@ -1,10 +1,22 @@
 <div id="header">
 	<h2 align="center">Online Scheduler</h2>
-	<%= link_to 'Home', root_url %>
-	<%= link_to 'Department', departments_path %> |
+	<ul id="sample-menu-1" class="sf-menu">
+	<li>
+		<%= link_to 'Home', root_url %> 
+	</li>
+	<li>	
+		<%= link_to 'Department', departments_path %>
+			<ul>
+					<% depts = Department.all %>
+					<% depts.each do |d| %>
+						<li><%= link_to d.name, d %></li>
+					<% end %>	
+			</ul>
+	</li>
+	</ul>			
 	<% if current_doctor %>
-		<p> Logged in as <%= current_doctor.name %>, <%= link_to 'Sign Out', signout_path %></p>
+		<p> Logged in as <%= current_doctor.name %> <%= link_to 'Sign Out', signout_path %></p>
 	<% else %>
 		 <%= link_to 'Sign In', signin_path %>	
-	<% end %>	
+	<% end %>
 </div>

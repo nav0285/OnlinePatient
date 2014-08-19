@@ -10,14 +10,18 @@
 <%= form_for @appointment do |f| %>
 	<th><%= f.label "Report" %></th>
 	<tr><td><%= f.text_area :report %></td></tr>
+	<%= f.hidden_field :complete, {:value=>1} %>
 	<tr><td><%= f.submit "Submit" %></td></tr>
 <% end %>
 </table>
 <p align="left">Previous reports</p>
 <table align="left">
 <% @app.each do |a| %>
+	<% if a.id == @appointment.id %>
+	<% else %>
 	<tr><td><%= a.report %></td>
 	<td> by Dr. <%= find_doctor(a.doctor_id) %>,</td>
 	<td> <small>Date: <%= a.appointment_date %></small></td></tr>
+	<% end %>
 <% end %>	
 </table>
