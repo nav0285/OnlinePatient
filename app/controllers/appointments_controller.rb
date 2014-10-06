@@ -7,13 +7,7 @@ class AppointmentsController < ApplicationController
 	helper_method :find_doctor
 
 	def index
-		if params[:id] == '1'
-			@date = Date.today + 1
-			@bool = true
-		else
-			@date = Date.today
-			@bool = false
-		end
+		@date = params[:dated]
 		@patients = current_doctor.appointments.where(appointment_date: "#{@date}")
 	end
 

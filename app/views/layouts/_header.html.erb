@@ -15,7 +15,7 @@
 	</li>
 	</ul>			
 	<% if current_doctor %>
-		<p> Logged in as <%= current_doctor.name %> <%= link_to 'Sign Out', signout_path %></p>
+		<p> Logged in as Dr.<%= current_doctor.name %> <%= link_to 'Sign Out', signout_path %></p>
 	<% else %>
 		 <%= link_to 'Sign In', signin_path %>	
 	<% end %>

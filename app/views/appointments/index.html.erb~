@@ -19,10 +19,5 @@
 		<% end %>
 	</table>
 <% else %>
-	<p> No Patients scheduled for today </p>
-<% end %><br/>
-<% if @bool %>
-	<%= link_to 'Yesterday', appointments_path %>
-<% else %>	
-	<%= link_to 'Tomorrow', appointments_path(id: '1') %>
-<% end %>	
+	<p> No Patients scheduled </p>
+<% end %>

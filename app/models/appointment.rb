@@ -1,5 +1,9 @@
 class Appointment < ActiveRecord::Base
 
+	extend SimpleCalendar
+  
+  has_calendar
+
 	belongs_to :doctor, dependent: :destroy
 	
 	belongs_to :patients, dependent: :destroy
