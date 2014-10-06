@@ -15,20 +15,23 @@ Commands:
 	                                                                                                  
 	$ rails new OnlinePatient -d mysql	                                                              
 	                                                                                                 
-Models:	                                                                                         
+Models:
+	                                                                                         
 	$ rails g model Patient	                                                                       
 	$ rails g model Doctor	                                                                         
   $ rails g model Appointment	                                                                    
   $ rails g model Department	                                                                     
 	                                                                                                 
-Controller:                                                                                      
+Controller:    
+                                                                                  
   $ rails g controller static_pages                                                               
   $ rails g controller patients                                                                   
   $ rails g controller doctors                                                                    
   $ rails g controller appointments                                                               
   $ rails g controller departments                                                                
 	                                                                                                 
-Database:                                                                                        
+Database:      
+                                                                                  
   $ rake db:migrate                                                                               
 	                                                                                                 
 View:                                                                                            
