@@ -13,26 +13,26 @@ Software Requirements:
 	                                                                                                 
 Commands:                                                                                        
 	                                                                                                  
-	$ rails new OnlinePatient -d mysql	                                                              
+	$ rails new OnlinePatient -d mysql
 
 Models:
          
 	$ rails g model Patient                                                               
 	$ rails g model Doctor
-  $ rails g model Appointment                                                     
+	$ rails g model Appointment
   $ rails g model Department
                                       
 Controller:
 
-  $ rails g controller static_pages                        
-  $ rails g controller patients                            
-  $ rails g controller doctors                                       
-  $ rails g controller appointments                                         
+  $ rails g controller static_pages
+  $ rails g controller patients
+  $ rails g controller doctors
+  $ rails g controller appointments
   $ rails g controller departments
 
 Database:
 
-  $ rake db:migrate                                                                               
+  $ rake db:migrate
 
 View:                                                                                            
 	                                                                                                 
