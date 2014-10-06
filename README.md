@@ -1,7 +1,7 @@
-#	The aim of the project is to implement a web application, where by any person ie, patient can    
-#	schedule an appointment online. The patient can go through the list of doctors available and     
-#	make an appointment to his/her choice and convenience. Also, the patients previous records if    
-#	any, are available to the doctor, helps in diagnosing the patients condition.                    
+The aim of the project is to implement a web application, where by any person ie, patient can
+schedule an appointment online. The patient can go through the list of doctors available and
+make an appointment to his/her choice and convenience. Also, the patients previous records if
+any, are available to the doctor, helps in diagnosing the patients condition.                    
                                                                                                    
 #	Software Requirements:                                                                           
                                                                                                    
