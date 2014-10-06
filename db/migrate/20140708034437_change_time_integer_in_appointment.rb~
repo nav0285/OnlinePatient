@@ -1,4 +1,0 @@
-class ChangeTimeIntegerInAppointment < ActiveRecord::Migration
-  def change
-  end
-end
