@@ -20,19 +20,19 @@ any, are available to the doctor, helps in diagnosing the patients condition.
 	$ rails g model Patient
 	$ rails g model Doctor
 	$ rails g model Appointment
-  $ rails g model Department
+        $ rails g model Department
   
 #Controller:
 
-  $ rails g controller static_pages
-  $ rails g controller patients
-  $ rails g controller doctors
-  $ rails g controller appointments
-  $ rails g controller departments
+        $ rails g controller static_pages
+        $ rails g controller patients
+        $ rails g controller doctors
+        $ rails g controller appointments
+        $ rails g controller departments
 
 #Database:
 
-  $ rake db:migrate
+        $ rake db:migrate
 
 #View:
 
