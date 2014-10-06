@@ -20,7 +20,7 @@ any, are available to the doctor, helps in diagnosing the patients condition.
 	$ rails g model Patient
 	$ rails g model Doctor
 	$ rails g model Appointment
-        $ rails g model Department
+      $ rails g model Department
   
 #Controller:
 
