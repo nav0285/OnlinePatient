@@ -1,3 +1,0 @@
-<% @app.each do |a| %>
-	<p><%= a.report %> by Dr. <%= find_doctor(a.doctor_id) %></p>
-<% end %>	

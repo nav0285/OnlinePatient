@@ -1,9 +1,0 @@
-<% if current_doctor %>
-	<div id="calendar"><%= month_calendar do |date| %>
-  	<%= link_to date.day, appointments_path(dated: date) %>
-	<% end %></div>
-<% else %>	
-	<h1>Welcome To Online Patient Scheduler</h1>
-	<h2>Schedule an <%= link_to 'Appointment', new_appointment_path %> online</h2>
-	<h2> Haven't registered yet? <%= link_to 'Click Here', new_patient_path %></h2>
-<% end %>

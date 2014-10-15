@@ -1,3 +1,0 @@
-<% @departments.each do |dept| %>
-	<p><%= link_to dept.name, dept %></p>
-<% end %>

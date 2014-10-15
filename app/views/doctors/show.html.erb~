@@ -1,7 +1,0 @@
-<h2> Profile </h2>
-	Name: <%= @doctor.name %><br/>
-	Sex : <%= @doctor.sex %><br/>
-	Qualification: <%= @doctor.qualification %><br/>
-	Speciality: <%= @doctor.experience %><br/>
-
-<%= link_to 'Back', department_path %>
